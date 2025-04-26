@@ -23,6 +23,27 @@
       .font-poppins {
         font-family: "Poppins", sans-serif;
       }
+      .glow-red {
+        filter: grayscale(100%);
+        transition: all 0.5s ease-in-out;
+    }
+    .glow-red:hover {
+        filter: grayscale(0%) brightness(120%) saturate(200%) hue-rotate(20deg);
+        box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.6);
+        animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 30px 10px rgba(255, 0, 0, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.6);
+      }
+    }
     </style>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -209,10 +230,24 @@
 
     <!-- Main Section Start -->
     <main class="md:container mx-auto">
-      <section class="my-24">
+    <!-- Featured Section -->
+     <section class="px-4 md:px-0">
+      <!-- Futured Heading -->
+      <div class="my-32 mb-14 text-center">
+        <h2 class="text-3xl lg:text-5xl font-bold ">Fetured Bikes In This Year</h2>
+      </div>
+      <!-- Fetured Image Container -->
+      <div class="flex justify-center md:justify-between flex-col md:flex-row gap-12 md:my-20 ">
+        <div class="flex-1 flex justify-center md:justify-start"><img class="w-4/5 filter grayscale hover:grayscale-0 hover:brightness-110 hover:saturate-200 hover:hue-rotate-[-20deg] transition duration-500" src="images/others/feature-bike.png" alt=""></div>
+        <div class="flex-1 flex justify-center"><img class="w-4/5" src="images/others/feature-bike.png" alt=""></div>
+        <div class="flex-1 flex justify-center md:justify-end"><img class="w-4/5 filter grayscale hover:grayscale-0 hover:brightness-110 hover:saturate-200 hover:hue-rotate-[40deg] transition duration-500" src="images/others/feature-bike.png" alt=""></div>
+      </div>
+     </section>
+    <!-- Latest News Section -->
+      <section class="my-28 px-4 md:px-0">
         <!-- Card Heading -->
         <div class="mb-14 text-center">
-          <h2 class="text-5xl font-bold ">Latest News</h2>
+          <h2 class="text-4xl md:text-5xl font-bold ">Latest News</h2>
         </div>
         <!-- Card Container -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -271,34 +306,80 @@
       </section>
 
     <!-- Review Section   -->
-      <section class="my-24 mt-36">
+      <section class="my-24 px-4 md:px-0 mt-36">
         <!-- Review Heading -->
-        <div class="mb-14 text-center">
-          <h2 class="text-5xl font-bold ">Happy <span class="text-button-primary">Clients says</span></h2>
+        <div class="mb-16 text-center">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold ">Happy <span class="text-button-primary">Clients says</span></h2>
         </div>
         <!-- Card Container -->
-         <div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-20">
           <!-- Card 01 -->
-          <div class="card bg-base-100 gap-5 border-2 shadow-sm">
+          <div class="card flex items-center rounded-md px-9 py-10 space-y-5 border-2 shadow-sm">
             <div class="avatar">
-              <div class="w-24 rounded-full">
-                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              <div class="w-[250px] h-auto object-cover rounded-full">
+                <img src="images/others/user-1.png" />
               </div>
             </div>
-            <div class="card-body">
-              <p>Slate helps you see how 
+            <div class="card-body space-y-[15px] p-0 flex flex-col items-center">
+              <p class="text-[#6C6C6C] text-center text-lg">Slate helps you see how 
                 many more days you need 
                 to work to reach your financial 
                 goal for the month and year.</p>
-              <div class="rating">
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+              <div class="rating space-x-3">
+                <input type="radio" name="rating-card-1" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                <input type="radio" name="rating-card-1" class="mask mask-star-2 bg-orange-400" aria-label="2 star" />
+                <input type="radio" name="rating-card-1" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+                <input type="radio" name="rating-card-1" class="mask mask-star-2 bg-orange-400" aria-label="4 star" checked="checked"/>
+                <input type="radio" name="rating-card-1" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
               </div>
-              <h5>Regina Miles</h5>
-              <h5>Banker</h5>
+              <h5 class="text-[#23A6F0] text-lg font-bold">Regina Miles</h5>
+              <h5 class="text-[#252B42] text-lg font-bold">Banker</h5>
+            </div>
+          </div>
+           <!-- Card 02 -->
+           <div class="card flex items-center rounded-md px-9 py-10 space-y-5 border-2 shadow-sm">
+            <div class="avatar">
+              <div class="w-[250px] h-auto object-cover rounded-full">
+                <img src="images/others/user-2.png"/>
+              </div>
+            </div>
+            <div class="card-body space-y-[15px] p-0 flex flex-col items-center">
+              <p class="text-[#6C6C6C] text-center text-lg">Slate helps you see how 
+                many more days you need 
+                to work to reach your financial 
+                goal for the month and year.</p>
+              <div class="rating space-x-3">
+                <input type="radio" name="rating-card-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                <input type="radio" name="rating-card-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star" />
+                <input type="radio" name="rating-card-2" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+                <input type="radio" name="rating-card-2" class="mask mask-star-2 bg-orange-400" aria-label="4 star" checked="checked"/>
+                <input type="radio" name="rating-card-2" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+              </div>
+              <h5 class="text-[#23A6F0] text-lg font-bold">Regina Miles</h5>
+              <h5 class="text-[#252B42] text-lg font-bold">Banker</h5>
+            </div>
+          </div>
+           <!-- Card 03 -->
+           <div class="card flex items-center rounded-md px-9 py-10 space-y-5 border-2 shadow-sm">
+            <div class="avatar">
+              <div class="w-[250px] h-auto object-cover rounded-full">
+                <img src="images/others/user-3.png" />
+              </div>
+            </div>
+            <div class="card-body space-y-[15px] p-0 flex flex-col items-center">
+              <p class="text-[#6C6C6C] text-center text-lg">Slate helps you see how 
+                many more days you need 
+                to work to reach your financial 
+                goal for the month and year.</p>
+              <div class="rating space-x-3">
+                <input type="radio" name="rating-card-3" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                <input type="radio" name="rating-card-3" class="mask mask-star-2 bg-orange-400" aria-label="2 star" />
+                <input type="radio" name="rating-card-3" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+                <input type="radio" name="rating-card-3" class="mask mask-star-2 bg-orange-400" aria-label="4 star" checked="checked"/>
+                <input type="radio" name="rating-card-3" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+              </div>
+              <h5 class="text-[#23A6F0] text-lg font-bold">Regina Miles</h5>
+              <h5 class="text-[#252B42] text-lg font-bold">Banker</h5>
             </div>
           </div>
          </div>
