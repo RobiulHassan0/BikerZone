@@ -1,5 +1,5 @@
 <!DOCTYPE html >
-<html lang="en" >
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,9 +22,8 @@
     }
   </script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.css" rel="stylesheet" type="text/css" />
+
   
-  <!-- Google Font (Optional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -33,48 +32,22 @@
 </head>
 <body>
 
-  <!-- Header/Navbar -->
-  <header class=" shadow-md">
-    <div class="container mx-auto px-4">
-      <div class="navbar">
-        
-        <!-- Left -->
-        <div class="navbar-start">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16"/>
-              </svg>
-            </div>
-            <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a>Home</a></li>
-              <li><a>Shop</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <a class="text-xl font-bold">BikerZone</a>
-        </div>
 
-        <!-- Center -->
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Shop</a></li>
-            <li><a>News</a></li>
-            <li><a>Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Right -->
-        <div class="navbar-end">
-          <a class="btn bg-button-primary text-white px-8">Login</a>
-        </div>
-
-      </div>
-    </div>
-  </header>
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" checked="checked" />
+    <div class="collapse-title font-semibold">How do I create an account?</div>
+    <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+  </div>
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+  </div>
+  <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+    <input type="radio" name="my-accordion-2" />
+    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+  </div>
 
 </body>
 </html>
